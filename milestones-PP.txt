@@ -1,0 +1,6 @@
+
+05 pts: Download and Create a Unity Account
+15 pts: Spend at least three hours to watch tutorials by Unity
+15 pts: Come up with a basic C++ code for disjoint set’s implementation
+05 pts: Covert code into Unity 
+
