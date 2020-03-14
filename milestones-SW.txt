@@ -1,0 +1,5 @@
+2 points - Delegate pieces if faerie bubbles functionality to group members
+5 points - Create Unity Account and Setup Coding Space
+10 points - Complete beginner tutorial
+8 points - Modify exisiting Unity project to somewhat mirror actions within faerie bubbles
+15 points - Create basic faerie bubbles scene where a dot can be launched from one end of the screen to the other
