@@ -1,0 +1,4 @@
+-10 pts: Create a Unity acount 
+-10 pts: Do one of the turtorials provided by Unity 
+-15 pts: Create basic functions of game board through c++
+-5 pts: Try to convert code into Unity
