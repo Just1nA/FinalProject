@@ -5,8 +5,8 @@ using UnityEngine;
 public class GridManager : MonoBehaviour
 {
     public GameObject[] bubbles;
-    public GameObject[,] grid;
-    public int[,] colors;
+    public static GameObject[,] grid;
+    public static int[,] colors;
     public Sprite sprite;
     private int index = 0;
     public int COL, ROW;
@@ -25,6 +25,7 @@ public class GridManager : MonoBehaviour
         spawnBubbles();
         Debug.Log(colors[0,5]);
         Debug.Log(colors[8,10]);
+        Disjoint.Print();
     }
 
     /* Dynamically create a 2d GameObject grid & 2d color grid */
