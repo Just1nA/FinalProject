@@ -6,6 +6,7 @@ public class GridManager : MonoBehaviour
 {
     public GameObject[] bubbles;
     public GameObject[,] grid;
+    public int[,] colors;
     public Sprite sprite;
     private int index = 0;
     public int COL, ROW;
@@ -17,21 +18,21 @@ public class GridManager : MonoBehaviour
     {
         Vertical = (int)Camera.main.orthographicSize;
         Horizontal = (int)(Vertical * Camera.main.aspect);
-        //Columns = Horizontal * 2;
-        //Rows = Vertical * 2;
         Columns = Horizontal * 2;
         Rows = Vertical * 2;
 
         createGrid();
         spawnBubbles();
-           
+        Debug.Log(colors[0,5]);
+        Debug.Log(colors[8,10]);
     }
 
-    /* Dynamically create a 2d GameObject grid */
+    /* Dynamically create a 2d GameObject grid & 2d color grid */
     private void createGrid()
     {
         int row = 11; int col = 9;
         grid = new GameObject[col, row];
+        colors = new int[col, row];
     }
 
 
@@ -46,15 +47,15 @@ public class GridManager : MonoBehaviour
             for (int j = 5; j < ROW; ++j)
             {
                 index = getRandom();
-                addTile(i, j);
+                addTile(i, j, index);
             }
         }
     }
 
 
 
-    /* Add the tile bubble into main camera and add GameObject to 2d grid */
-    private void addTile(int i, int j)
+    /* Add the tile bubble into main camera and add GameObject to 2d grid and add color to 2d colors */
+    private void addTile(int i, int j, int index)
     {   
         GameObject bubble = (GameObject)Instantiate(bubbles[index], transform);
         
@@ -71,19 +72,18 @@ public class GridManager : MonoBehaviour
         int x = 0; int y = 0;
         x = i - 7;
         y = j;
-        //x = ;
-        //y = ;
-                //Debug.Log(i + ", " + j);
         Debug.Log(x + ", " + y);
+        //Set GameObject bubble on 2d grid
         grid[x,y] = bubble;
-        //if (x == 0 && y == 5) Destroy(grid[x,y]);
+        //Set color on 2d grid
+        colors[x,y] = index;
 
     }
 
     /* Get a random element of the bubbles GameObject array */
     private int getRandom()
     {
-        int randomNum = Random.Range(0, bubbles.Length);
+        int randomNum = Random.Range(1, bubbles.Length);
         return randomNum;
     }
 }

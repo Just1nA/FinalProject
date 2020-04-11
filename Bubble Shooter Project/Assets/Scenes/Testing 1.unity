@@ -224,12 +224,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubbles:
+  - {fileID: 2305112738099225262, guid: 489a5780ceade1f45ae778996c7127ba, type: 3}
   - {fileID: 6090949812127793932, guid: 492623a31a834ef47912ca89eca3167b, type: 3}
   - {fileID: 8652144158542084610, guid: f5b98dac2438cdb4da9e4b095eadb6d5, type: 3}
   - {fileID: 5112635155615840374, guid: efff74b15b5a17847b38abeca76ae610, type: 3}
   - {fileID: 4921217444310530860, guid: d52b753edf6dbc44aafd80598188923d, type: 3}
   - {fileID: 6265223175312464562, guid: cf85762b8e64cd5438fef8768cf91296, type: 3}
   sprite: {fileID: 0}
+  COL: 0
+  ROW: 0
 --- !u!4 &1804471778
 Transform:
   m_ObjectHideFlags: 0
