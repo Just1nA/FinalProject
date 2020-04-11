@@ -7,9 +7,7 @@ public class GridManager : MonoBehaviour
     public GameObject[] bubbles;
     public Sprite sprite;
     private int index = 0;
-    //public float[,] grid;
-    //public static int ROW = 10;
-    //public static int COL = 9;
+    public int COL, ROW;
     int Vertical, Horizontal, Columns, Rows;
     
 
@@ -18,42 +16,54 @@ public class GridManager : MonoBehaviour
     {
         Vertical = (int)Camera.main.orthographicSize;
         Horizontal = (int)(Vertical * Camera.main.aspect);
-        Columns = Horizontal * 2;
-        Rows = Vertical * 2;
-        //grid = new float[Columns, Rows];
+        //Columns = Horizontal * 2;
+        //Rows = Vertical * 2;
+        Rows = Horizontal * 2;
+        Columns = Vertical * 2;
 
-        
-
-        for (int i = 10; i < Columns; ++i)
-        {
-            for (int j = 10; j < Rows; ++j)
-            {
-                index = getRandom();
-                //GameObject referenceTile = (GameObject)bubbles[index];
-                GameObject tile = (GameObject)Instantiate(bubbles[index], transform);
-                tile.transform.position = new Vector2(i - (Horizontal - 0.5f) ,  j - (Vertical - 0.5f));
-                //grid[i, j] = Random.Range(0.0f, 1.0f); 
-                //GenerateGrid(i , j, grid[i, j]);
-            }
-        }
+        generateGrid();
            
     }
 
-/*
-    private void GenerateGrid(int x, int y, float value)
+    /* Generate a bubble grid on the main camera */
+    private void generateGrid()
     {
-       //GameObject g = (GameObject)Instantiate(Resources.Load("Bubble"));
-       GameObject g = new GameObject("X: "+x+"Y: "+y);
-       g.transform.position = new Vector3(x - (Horizontal - 0.5f), y - (Vertical - 0.5f));
-       var s = g.AddComponent<SpriteRenderer>();
-       s.sprite = sprite;
-       s.color = new Color(value, value, value); 
-    }
-*/
+        ROW = Rows - 8;
+        COL = Columns - 1;
 
+        for (int i = 7; i < ROW; ++i)
+        {
+            for (int j = 5; j < COL; ++j)
+            {
+                index = getRandom();
+                addTile(i, j);
+            }
+        }
+    }
+
+    /* Add the tile bubble into the camera grid */
+    private void addTile(int i, int j)
+    {   
+        GameObject bubble = (GameObject)Instantiate(bubbles[index], transform);
+        
+        //Offset the odd columns
+        if (j % 2 == 0) 
+        {
+            bubble.transform.position = new Vector2(i - (Horizontal - 0.5f) + 0.5f ,  j - (Vertical - 0.5f));
+        }
+        //Regular offset
+        else 
+        {
+            bubble.transform.position = new Vector2(i - (Horizontal - 0.5f) ,  j - (Vertical - 0.5f));
+        }
+
+        //if (j == 8) Destroy(bubble);
+    }
+
+    /* Get a random element of the bubbles GameObject array */
     private int getRandom()
     {
-        int randomNum = Random.Range(0, 5);
+        int randomNum = Random.Range(0, bubbles.Length);
         return randomNum;
     }
 }
