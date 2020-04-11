@@ -5,6 +5,7 @@ using UnityEngine;
 public class GridManager : MonoBehaviour
 {
     public GameObject[] bubbles;
+    public GameObject[,] grid;
     public Sprite sprite;
     private int index = 0;
     public int COL, ROW;
@@ -18,22 +19,31 @@ public class GridManager : MonoBehaviour
         Horizontal = (int)(Vertical * Camera.main.aspect);
         //Columns = Horizontal * 2;
         //Rows = Vertical * 2;
-        Rows = Horizontal * 2;
-        Columns = Vertical * 2;
+        Columns = Horizontal * 2;
+        Rows = Vertical * 2;
 
-        generateGrid();
+        createGrid();
+        spawnBubbles();
            
     }
 
-    /* Generate a bubble grid on the main camera */
-    private void generateGrid()
+    /* Dynamically create a 2d GameObject grid */
+    private void createGrid()
     {
-        ROW = Rows - 8;
-        COL = Columns - 1;
+        int row = 11; int col = 9;
+        grid = new GameObject[col, row];
+    }
 
-        for (int i = 7; i < ROW; ++i)
+
+    /* Generate a bubble grid on the main camera */
+    private void spawnBubbles()
+    {
+        COL = Columns - 8;
+        ROW = Rows - 1;
+        
+        for (int i = 7; i < COL; ++i)
         {
-            for (int j = 5; j < COL; ++j)
+            for (int j = 5; j < ROW; ++j)
             {
                 index = getRandom();
                 addTile(i, j);
@@ -41,7 +51,9 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    /* Add the tile bubble into the camera grid */
+
+
+    /* Add the tile bubble into main camera and add GameObject to 2d grid */
     private void addTile(int i, int j)
     {   
         GameObject bubble = (GameObject)Instantiate(bubbles[index], transform);
@@ -56,8 +68,16 @@ public class GridManager : MonoBehaviour
         {
             bubble.transform.position = new Vector2(i - (Horizontal - 0.5f) ,  j - (Vertical - 0.5f));
         }
+        int x = 0; int y = 0;
+        x = i - 7;
+        y = j;
+        //x = ;
+        //y = ;
+                //Debug.Log(i + ", " + j);
+        Debug.Log(x + ", " + y);
+        grid[x,y] = bubble;
+        //if (x == 0 && y == 5) Destroy(grid[x,y]);
 
-        //if (j == 8) Destroy(bubble);
     }
 
     /* Get a random element of the bubbles GameObject array */
