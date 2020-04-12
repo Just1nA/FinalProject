@@ -1,0 +1,4 @@
+5 pts : Create Unity account
+10 pts: Complete one of the beginner tutorials
+15 pts: Create c++ code that generates random bubble colors for the bubble generator
+10 pts: Upload and convert the code into Unity
