@@ -10,6 +10,7 @@ public class GridManager : MonoBehaviour
     public Sprite sprite;
     private int index = 0;
     public int COL, ROW;
+    public int row = 11; public int col = 9;
     int Vertical, Horizontal, Columns, Rows;
     
 
@@ -17,6 +18,7 @@ public class GridManager : MonoBehaviour
     void Start()
     {
         Vertical = (int)Camera.main.orthographicSize;
+        Debug.Log(Screen.width + ", " + Screen.height);
         Horizontal = (int)(Vertical * Camera.main.aspect);
         Columns = Horizontal * 2;
         Rows = Vertical * 2;
@@ -25,13 +27,14 @@ public class GridManager : MonoBehaviour
         spawnBubbles();
         Debug.Log(colors[0,5]);
         Debug.Log(colors[8,10]);
+        Disjoint.resize(row*col);
         Disjoint.Print();
     }
 
     /* Dynamically create a 2d GameObject grid & 2d color grid */
     private void createGrid()
     {
-        int row = 11; int col = 9;
+
         grid = new GameObject[col, row];
         colors = new int[col, row];
     }
@@ -41,6 +44,7 @@ public class GridManager : MonoBehaviour
     private void spawnBubbles()
     {
         COL = Columns - 8;
+        //COL = 16;
         ROW = Rows - 1;
         
         for (int i = 7; i < COL; ++i)
