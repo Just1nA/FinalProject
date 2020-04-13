@@ -6,11 +6,15 @@ public class Bubble : MonoBehaviour {
 
     public Transform shooter;
     public static bool isFired;
-    public static bool wallHit;
+    public static bool once;
     public static bool swallHit;
     public static bool rotating;
-    public GameObject SpawnedBall;
+    public static float xcoord;
+    public static float ycoord;
+    public GameObject StaticBall;
+    public GameObject SpawnedBubble;
     public Rigidbody2D rb;
+    public Transform newbubblepos;
     public float movespeed = 10f;
 
 
@@ -18,8 +22,7 @@ public class Bubble : MonoBehaviour {
     void Start()
     {
         isFired = false;
-        wallHit = false;
-        swallHit = false;
+        once = false;
       
     }
 
@@ -28,46 +31,58 @@ public class Bubble : MonoBehaviour {
     {
         
         rotating = true;
-        if(Input.GetKey("space"))
+        if(Input.GetKeyDown("space"))
         {
+            if(once == false){
             isFired = true;
             rotating = false;
+            once = true;
+            }
               
         }
         
         if(isFired)
         {
+
         //transform.Translate(Vector3.up * Time.deltaTime * movespeed);
+       // rb.velocity = new Vector3(10, 10, 0);
+        //rb.AddRelativeForce(Vector2.up, ForceMode2D.Impulse);
+        FIRE();
+        isFired = false;
+      // rb.AddForceAtPosition()
+        xcoord = rb.velocity.x;
+        ycoord = rb.velocity.y;
+      //  rb.velocity = new Vector2(xcoord,ycoord);
+      
+
+        transform.parent = null;
+       // Vector3 vel = rb.velocity;
+        //transform.position += vel * Time.deltaTime;
         
-        rb.AddRelativeForce(Vector2.up, ForceMode2D.Force);
            // transform.position =  Vector3.up * Time.deltaTime;
-        } else if(wallHit)
-        {
-           // rb.velocity = Vector3.zero;
-        }else if(rotating)
+        } else if(rotating)
         {
             transform.rotation = shooter.rotation;
-        }else if(swallHit)
-        {
-            Debug.Log("smallwallhit");
-            Debug.Log(swallHit);
-            var tempx = transform.position.x * -1;
-            var tempy = transform.position.y;
-            var tempz = transform.position.z;
-            tempx = tempx + tempx;
-            rb.velocity = new Vector3(tempx, -8, tempz);
-            
-            swallHit = false;
         }
     }
 
     public void StopBubble()
     {
-         if(SpawnedBall != null)
+         if(SpawnedBubble != null)
          {
-            Instantiate(SpawnedBall, rb.position, Quaternion.identity);
+            Instantiate(StaticBall, rb.position, Quaternion.identity);
+            var newbub = Instantiate(SpawnedBubble, newbubblepos.position, Quaternion.identity);
+            newbub.transform.parent = newbubblepos.transform;
+
          }
 
          Destroy(gameObject);
     }
+
+    public void FIRE()
+{
+    rb.AddRelativeForce(Vector2.up * movespeed, ForceMode2D.Impulse);
+
 }
+}
+

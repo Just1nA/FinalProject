@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BubbleOnBoard.cs" />
      <Compile Include="Assets\Scenes\Bubble.cs" />
      <Compile Include="Assets\Scenes\BubbleTWall.cs" />
      <Compile Include="Assets\Scenes\SideWalls.cs" />
@@ -117,19 +118,19 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Skylar White/Desktop/FinalProject-JA-Branch/FinalProject-JA-Branch/Bubble Shooter Project Cuur/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Skylar White/Documents/GitHub/FinalProjectNowCurr/Bubble Shooter Project Cuur/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Skylar White/Desktop/FinalProject-JA-Branch/FinalProject-JA-Branch/Bubble Shooter Project Cuur/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Skylar White/Documents/GitHub/FinalProjectNowCurr/Bubble Shooter Project Cuur/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/Skylar White/Desktop/FinalProject-JA-Branch/FinalProject-JA-Branch/Bubble Shooter Project Cuur/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/Skylar White/Documents/GitHub/FinalProjectNowCurr/Bubble Shooter Project Cuur/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Skylar White/Desktop/FinalProject-JA-Branch/FinalProject-JA-Branch/Bubble Shooter Project Cuur/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Skylar White/Documents/GitHub/FinalProjectNowCurr/Bubble Shooter Project Cuur/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/Skylar White/Desktop/FinalProject-JA-Branch/FinalProject-JA-Branch/Bubble Shooter Project Cuur/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>C:/Users/Skylar White/Documents/GitHub/FinalProjectNowCurr/Bubble Shooter Project Cuur/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -333,7 +334,7 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.20f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/Skylar White/Desktop/FinalProject-JA-Branch/FinalProject-JA-Branch/Bubble Shooter Project Cuur/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Skylar White/Documents/GitHub/FinalProjectNowCurr/Bubble Shooter Project Cuur/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.20f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

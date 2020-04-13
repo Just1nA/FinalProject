@@ -11,18 +11,20 @@ public class SideWalls : MonoBehaviour
     
         Bubble.swallHit = true;
         Bubble.rotating = false;
-        Debug.Log(Bubble.swallHit);
         Debug.Log("SMALL");
         if(col.tag == "Bubble")
         {
-            //Debug.Log("Function");
-           // col.GetComponent<Bubble>().rb.velocity = Vector3.zero;
-           col.GetComponent<Bubble>().rb.gravityScale = 0;
-            var tempx = transform.position.x;
+            Debug.Log("Function");
+           var tempx = transform.position.x;
             var tempy = transform.position.y;
+            var x = col.GetComponent<Bubble>().rb.velocity.x;
+            var y = col.GetComponent<Bubble>().rb.velocity.y;
+
            // tempz = tempz + tempz;
-            tempx = tempx + tempx;
-            col.GetComponent<Bubble>().rb.velocity = new Vector2(-tempx, -tempy);
+          //   col.GetComponent<Bubble>().rb.velocity = new Vector2(-tempx, -tempy);
+
+           // col.GetComponent<Bubble>().rb.velocity = rb.velocity.normalized * 10f;
+           // col.GetComponent<Bubble>().rb.AddRelativeForce(new Vector2(-x, y), ForceMode2D.Force);
             
             //swallHit = false;
         }
