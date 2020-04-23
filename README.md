@@ -48,3 +48,7 @@ In order to score points, you need to score sets of 3 or more bubbles. The score
 3. Open the project folder.
 
 **NOTE:** If you want to view the scripts without downloading Unity, you need to download either `Bubble Shooter (16-10 Ratio - Mac) .zip` or `Bubble Shooter (16-9 Ratio - Windows).zip` from the repo. After unzipping, go to the `Assets/Scripts` folder and view the the C# scripts. 
+
+
+## Known Bugs
+- When opening the project in the Unity, the pre-fabs may need to be reloaded to ensure their function scripts are properly attached to them. This should not impact the function of the game executable.
