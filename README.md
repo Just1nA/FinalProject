@@ -1,7 +1,7 @@
 # Bubble Shooter! 
 
 ## How to run on Windows
-1. Download the Bubble Shooter - Windows.app folder from the repository
+1. Download the `Bubble Shooter - Windows.app` folder from the repository
 2. Open `Bubble Shooter Project.exe`. 
 3. Move on to "How to run this application".
 
@@ -40,15 +40,18 @@ There are two different game modes for Bubble Shooter: Classic and Expert.
 
 In order to score points, you need to score sets of 3 or more bubbles. The score of that set is (Set Size x Pts of Colored Bubble). Hanging, or isolated, bubbles will not be scored when popped. 
 
+**NOTE: High scores will reset once you go back to the Main Menu screen.** High scores will stay the same for both game modes. 
+
 
 ## How to Open Project in Unity
-0. Download Unity Hub and either `Bubble Shooter (16-10 Ratio - Mac).zip` or `Bubble Shooter (16-9 Ratio - Windows).zip`.
+0. Download Unity Hub and either `Bubble Shooter - Mac.zip` or `Bubble Shooter - PC.zip`.
 1. Make sure you have `Unity 2018.4.20f1` installed.
 2. Unzip the project folder and open it with Unity Hub. Make sure you check the Target Platform that you are opening it with. 
 3. Open the project folder.
 
-**NOTE:** If you want to view the scripts without downloading Unity, you need to download either `Bubble Shooter (16-10 Ratio - Mac) .zip` or `Bubble Shooter (16-9 Ratio - Windows).zip` from the repo. After unzipping, go to the `Assets/Scripts` folder and view the the C# scripts. 
+**NOTE:** If you want to view the scripts without downloading Unity, you need to download either `Bubble Shooter - Mac .zip` or `Bubble Shooter - PC.zip` from the repo. After unzipping, go to the `Assets/Scripts` folder and view the the C# scripts. 
 
 
 ## Known Bugs
 - When opening the project in the Unity, the pre-fabs may need to be reloaded to ensure their function scripts are properly attached to them. This should not impact the function of the game executable.
+
