@@ -4,7 +4,7 @@
 1. Download the correct build application to your local computer. 
 2. Open the application and it display a setup manager. 
    - **(PC):** Click on 1920 x 1080 (or some 16:9 ratio) screen resolution.
-   - **(Mac):** Click on 1650 x 1050 (or some 16:10 ratio) screen resolution. 
+   - **(Mac):** Click on 1680 x 1050 (or some 16:10 ratio) screen resolution. 
    - Click on Ultra graphics quality. 
    - If you want to play it in a window instead of full-screen, please check the box that says "Windowed".
    - Do not change game control inputs! It will not run correctly if changed. 
