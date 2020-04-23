@@ -43,7 +43,7 @@ In order to score points, you need to score sets of 3 or more bubbles. The score
 
 ## How to Open Project in Unity
 0. Download Unity Hub and either `Bubble Shooter (16-10 Ratio - Mac).zip` or `Bubble Shooter (16-9 Ratio - Windows).zip`.
-1. Make sure you have `Unity 2018.4.20f1` installed.`
+1. Make sure you have `Unity 2018.4.20f1` installed.
 2. Unzip the project folder and open it with Unity Hub. Make sure you check the Target Platform that you are opening it with. 
 3. Open the project folder.
 
