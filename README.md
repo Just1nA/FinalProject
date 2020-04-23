@@ -15,6 +15,3 @@ There are two different game modes for Bubble Shooter: Classic and Expert.
 - **Classic:** Just a regular ole bubble shooter game. The objective is to clear all of the bubbles off of the screen with as many points as possible. There is no time limit, but it tests your patience! 
 - **Expert:** The objective of this mode is to clear all of the bubbles before they reach the bad area. Sounds easy, but did we mention that the bubbles drop down rows? Good luck trying to pass this level! 
 
-
-### Current Bugs
-- Depending on what screen resolution the player chooses when launching the application, the buttons could be offset. We are currently trying to fix this bug. Sorry for the inconvenience! 
