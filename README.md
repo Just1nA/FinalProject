@@ -1,19 +1,28 @@
 # Bubble Shooter! 
 
+## How to run on Windows
+1. Download the Bubble Shooter - Windows.app folder from the repository
+2. Open `Bubble Shooter Project.exe`. 
+3. Move on to "How to run this application".
+
+## How to run on Mac
+1. Download the .zip file of the repository and unzip. 
+2. Open the build that says `Bubble Shooter - Mac.app`
+3. Move on to "How to run this application".
+
 ## How to run this application
-1. Download the correct build application to your local computer. 
-2. Open the application and it display a setup manager. 
+1. Open the application (.exe or .app) and it will display a setup manager. 
    - **(PC):** Click on 1920 x 1080 (or some 16:9 ratio) screen resolution.
    - **(Mac):** Click on 1680 x 1050 (or some 16:10 ratio) screen resolution. 
    - Click on Ultra graphics quality. 
    - If you want to play it in a window instead of full-screen, please check the box that says "Windowed".
    - Do not change game control inputs! It will not run correctly if changed. 
-3. Click play to run!
+2. Click play to run!
 
 ## Player Controls
-- Left Arrow Key - Rotates shooter to the left
-- Right Arrow Key - Rotates shooter to the right
-- Space Bar - Shoots the bubble
+- `Left Arrow Key` - Rotates shooter to the left
+- `Right Arrow Key` - Rotates shooter to the right
+- `Space Bar` - Shoots the bubble
 
 ## Game Modes
 There are two different game modes for Bubble Shooter: Classic and Expert. 
@@ -30,3 +39,12 @@ There are two different game modes for Bubble Shooter: Classic and Expert.
   - Light Blue: 6 pts
 
 In order to score points, you need to score sets of 3 or more bubbles. The score of that set is (Set Size x Pts of Colored Bubble). Hanging, or isolated, bubbles will not be scored when popped. 
+
+
+## How to Open Project in Unity
+0. Download Unity Hub and either `Bubble Shooter (16-10 Ratio - Mac).zip` or `Bubble Shooter (16-9 Ratio - Windows).zip`.
+1. Make sure you have `Unity 2018.4.20f1` installed.
+2. Unzip the project folder and open it with Unity Hub. Make sure you check the Target Platform that you are opening it with. 
+3. Open the project folder.
+
+**NOTE:** If you want to view the scripts without downloading Unity, you need to download either `Bubble Shooter (16-10 Ratio - Mac) .zip` or `Bubble Shooter (16-9 Ratio - Windows).zip` from the repo. After unzipping, go to the `Assets/Scripts` folder and view the the C# scripts. 
