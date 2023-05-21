@@ -1,4 +1,5 @@
 # Bubble Shooter! 
+<img width="856" alt="bubble_shooter_img" src="https://github.com/Just1nA/FinalProject/assets/59838742/def60b64-7b40-44e4-9b37-258a9496da26">
 
 ## How to run on Windows
 1. Download the `Bubble Shooter - Windows.app` folder from the repository
